@@ -39,7 +39,7 @@ void DOWN_projectile(double v_0, double time_up, double angle, double y_max){
         //kinematic equation y_t = v_0*t + 1/2at^2 
         //modify time increments
         y_t = y_max - (0.5*t*t*dt*dt*a2);
-        x_t = cos(angle)*v_0*(int)(time_up) +1.25+ cos(angle)*v_0*(t*dt);
+        x_t = cos(angle)*v_0*(int)(time_up) +cos(angle)*v_0*(dt)+ cos(angle)*v_0*(t*dt);
         cout << "time t: " << t*dt+(int)(time_up)+dt <<"s";
         cout << "| y position: " << y_t <<"m ";
         cout << "| x position: " << x_t <<"m "<< endl;
